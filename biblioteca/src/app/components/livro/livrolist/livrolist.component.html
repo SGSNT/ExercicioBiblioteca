@@ -1,0 +1,74 @@
+<div class="container">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h3 class="text-primary">CATÁLOGO DE LIVROS</h3>
+
+            <div class="alinhar">
+
+                <button (click)="save()" class="btn btn-sucesses btn-rounded btn-btn"><i class="fas fa-book"></i></button>
+
+            </div>
+
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">ID</th>
+                        <th scope="col">TÍTULO</th>
+                        <th scope="col">DATA PUBLICAÇÃO</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @for (livro of lista; track $index;) {
+
+                        <tr>
+
+                            <th scope="row">{{livro.id}}</th>
+                            <td>{{livro.titulo}}</td>
+                            <td>{{livro.dataPublicacao}}</td>
+                            <td>
+                                <div class="alinhar">
+
+                                    <button (click)="update(livro)" class="btn btn-sucesses btn-rounded btn-btn1"><i class="fas fa-pen"></i></button>
+                                    <button (click)="delete(livro)" class="btn btn-sucesses btn-rounded btn-btn2"><i class="fas fa-trash-can"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<ng-template #modalDetalhe>
+
+    <div class="modal-header">
+
+        <h5 class="modal-title" id="exampleModalLabel">CADASTRO LIVROS</h5>
+
+        <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
+
+    </div>
+
+    <div class="modal-body">
+
+        <app-livrodetails [livro]="livroEdit" (return)="returnDetail($event)"></app-livrodetails>
+    
+    </div>
+
+</ng-template>

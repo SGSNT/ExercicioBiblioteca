@@ -1,0 +1,80 @@
+<div class="container">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h3 class="text-primary">CATÁLOGO DE AUTORES</h3>
+
+            <div class="alinhar">
+
+                <button (click)="save()" class="btn btn-sucesses btn-rounded btn-btn"><i class="fas fa-user-plus"></i></button>
+
+            </div>
+
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">ID</th>
+                        <th scope="col">NOME</th>
+                        <th scope="col">DATA NASCIMENTO</th>
+			            <th scope="col">NACIONALIDADE</th>
+			            <th scope="col">EMAIL</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @for (autor of lista; track $index;) {
+
+                        <tr>
+
+                            <th scope="row">{{autor.id}}</th>
+                            <td>{{autor.nome}}</td>
+                            <td>{{autor.dataNascimento}}</td>
+                            <td>{{autor.nacionalidade}}</td>
+                            <td>{{autor.email}}</td>
+                            <td>
+                                <div class="alinhar">
+
+                                    <button (click)="update(autor)" class="btn btn-sucesses btn-rounded btn-btn1"><i class="fas fa-pen"></i></button>
+                                    <button (click)="delete(autor)" class="btn btn-sucesses btn-rounded btn-btn2"><i class="fas fa-trash-can"></i></button>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<ng-template #modalDetalhe>
+
+    <div class="modal-header">
+
+        <h5 class="modal-title" id="exampleModalLabel">CADASTRO AUTORES</h5>
+
+        <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
+
+    </div>
+
+    <div class="modal-body">
+
+        <app-autordetails [autor]="autorEdit" (return)="returnDetail($event)"></app-autordetails>
+    
+    </div>
+
+</ng-template>

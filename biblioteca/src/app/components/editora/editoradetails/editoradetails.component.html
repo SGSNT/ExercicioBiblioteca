@@ -1,0 +1,68 @@
+<div class="container">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="editora.id"/>
+                <label class="form-label" for="formControlLg">ID</label>
+
+            </mdb-form-control>
+
+            <br>
+
+           <mdb-form-control>
+
+            <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="editora.nome"/>
+            <label class="form-label" for="formControlLg">NOME</label>
+
+
+            </mdb-form-control>
+
+            <br>
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="editora.cnpj"/>
+                <label class="form-label" for="formControlLg">CNPJ</label>
+
+            </mdb-form-control>
+
+             <br>
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="editora.email"/>
+                <label class="form-label" for="formControlLg">EMAIL</label>
+
+            </mdb-form-control>
+
+             <br>
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="editora.telefone"/>
+                <label class="form-label" for="formControlLg">TELEFONE</label>
+
+            </mdb-form-control>
+
+<br>
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="editora.endereco"/>
+                <label class="form-label" for="formControlLg">ENDEREÇO</label>
+
+            </mdb-form-control>
+
+
+
+            <button (click)="save()" type="button" class="btn btn-primary btn-rounded" mdbRipple>Salvar</button>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,81 @@
+<div class="container">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h3 class="text-primary">CATÁLOGO DE EDITORAS</h3>
+
+            <div class="alinhar">
+
+                <button (click)="save()" class="btn btn-sucesses btn-rounded btn-btn"><i class="fas fa-shop"></i></button>
+
+            </div>
+
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">ID</th>
+                        <th scope="col">NOME</th>
+                        <th scope="col">CNPJ</th>
+                        <th scope="col">EMAIL</th>
+ 		       <th scope="col">TELEFONE</th>
+                      <th scope="col">ENDEREÇO</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @for (editora of lista; track $index;) {
+
+                        <tr>
+
+                            <th scope="row">{{editora.id}}</th>
+                            <td>{{editora.nome}}</td>
+                            <td>{{editora.cnpj}}</td>
+ 			  <td>{{editora.email}}</td>
+                          <td>{{editora.telefone}}</td>
+                         <td>{{editora.endereco}}</td>
+
+                            <td>
+                                <div class="alinhar">
+
+                                    <button (click)="update(editora)" class="btn btn-sucesses btn-rounded btn-btn1"><i class="fas fa-pen"></i></button>
+                                    <button (click)="delete(editora)" class="btn btn-sucesses btn-rounded btn-btn2"><i class="fas fa-trash-can"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<ng-template #modalDetalhe>
+
+    <div class="modal-header">
+
+        <h5 class="modal-title" id="exampleModalLabel">CADASTRO EDITORAS</h5>
+
+        <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
+
+    </div>
+
+    <div class="modal-body">
+
+        <app-editoradetails [editora]="editoraEdit" (return)="returnDetail($event)"></app-editoradetails>
+    
+    </div>
+
+</ng-template>

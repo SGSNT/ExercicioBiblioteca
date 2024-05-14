@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="autor.id"/>
+                <label class="form-label" for="formControlLg">ID</label>
+
+            </mdb-form-control>
+
+            <br>
+
+           <mdb-form-control>
+
+            <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="autor.nome"/>
+            <label class="form-label" for="formControlLg">NOME</label>
+
+
+            </mdb-form-control>
+
+            <br>
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="autor.dataNascimento"/>
+                <label class="form-label" for="formControlLg">DATA NASCIMENTO</label>
+
+            </mdb-form-control>
+
+<br>
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="autor.nacionalidade"/>
+                <label class="form-label" for="formControlLg">NACIONALIDADE</label>
+
+            </mdb-form-control>
+
+<br>
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="autor.email"/>
+                <label class="form-label" for="formControlLg">EMAIL</label>
+
+            </mdb-form-control>
+
+
+
+            <button (click)="save()" type="button" class="btn btn-primary btn-rounded" mdbRipple>Salvar</button>
+
+        </div>
+
+    </div>
+
+</div>

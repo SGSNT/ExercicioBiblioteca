@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="livro.id"/>
+                <label class="form-label" for="formControlLg">ID</label>
+
+            </mdb-form-control>
+
+            <br>
+
+           <mdb-form-control>
+
+            <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="livro.titulo"/>
+            <label class="form-label" for="formControlLg">TÍTULO</label>
+
+
+            </mdb-form-control>
+
+            <br>
+
+            <mdb-form-control>
+
+                <input mdbInput type="text" id="formControlLg" class="form-control form-control" (keyup.enter)="save()" [(ngModel)]="livro.dataPublicacao"/>
+                <label class="form-label" for="formControlLg">DATA PUBLICAÇÃO</label>
+
+            </mdb-form-control>
+
+            <button (click)="save()" type="button" class="btn btn-primary btn-rounded" mdbRipple>Salvar</button>
+
+        </div>
+
+    </div>
+
+</div>

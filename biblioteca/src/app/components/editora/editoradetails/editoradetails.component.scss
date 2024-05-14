@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+.container{
+    font-family: 'Poppins', sans-serif;
+}
+
+mdb-form-control{
+    width: 300px;
+    height: 40px; 
+    margin-left: 45px;
+    font-weight: 700;
+    background-color: white;
+    border: none;
+}
+
+
+.btn-primary{
+    color: white;
+    font-weight: 700;
+    background-color: #8000bf;
+    margin-left: 115px;
+    width: 150px;   
+    margin-top: 15px;
+}
